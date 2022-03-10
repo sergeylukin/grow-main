@@ -59,7 +59,7 @@ function Content() {
       <Block factor={1} offset={0}>
         <Block offset={-0.1} shift={0.3} factor={2.1}>
           <group position={[2, -2, 0]}>
-            <Plane map={logo[0]} shift={15} factor={2} aspect={0.3} args={[24, 19, 22, 22]} ssize={24} />
+            <Plane map={logo[0]} shift={5} factor={0.3} aspect={0.1} args={[11, 8, 8, 8]} size={8} />
           </group>
         </Block>
         <Block factor={1.0}>
@@ -81,9 +81,7 @@ function Content() {
       ))}
       <Block factor={1.25} offset={8}>
         <Html style={{ color: "white" }} className="bottom-left" position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
-          <a onClick={() => (window.location = "https://www.youtube.com/watch?v=4-tY6hmKcms")} href="https://www.youtube.com/watch?v=4-tY6hmKcms">
-            Culture is not your friend.
-          </a>
+          Culture is not your friend.
         </Html>
       </Block>
     </>
