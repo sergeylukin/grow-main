@@ -51,6 +51,7 @@ function Content() {
     TextureLoader,
     state.paragraphs.map(({ image }) => image)
   )
+  const logo = useLoader(TextureLoader, ["/logo.png"])
   useMemo(() => images.forEach((texture) => (texture.minFilter = LinearFilter)), [images])
   const { contentMaxWidth: w, canvasWidth, canvasHeight, mobile } = useBlock()
   return (
@@ -58,12 +59,12 @@ function Content() {
       <Block factor={1} offset={0}>
         <Block offset={-0.1} shift={0.3} factor={2.1}>
           <group position={[2, -2, 0]}>
-            <Plane map={images[0]} shift={15} factor={2} aspect={0.3} args={[24, 19, 22, 22]} ssize={24} />
+            <Plane map={logo[0]} shift={15} factor={2} aspect={0.3} args={[24, 19, 22, 22]} ssize={24} />
           </group>
         </Block>
         <Block factor={1.0}>
           <Html className="bottom-left" style={{ color: "white" }} position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
-            It was the year 2076.{mobile ? <br /> : " "}The substance had arrived.
+            Post Mortem
           </Html>
         </Block>
       </Block>
