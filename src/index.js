@@ -81,7 +81,9 @@ function Content() {
       ))}
       <Block factor={1.25} offset={8}>
         <Html style={{ color: "white" }} className="bottom-left" position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
-          Culture is not your friend.
+          <a onClick={() => (window.location = "https://www.youtube.com/watch?v=4-tY6hmKcms")} href="https://www.youtube.com/watch?v=4-tY6hmKcms">
+            Culture is not your friend.
+          </a>
         </Html>
       </Block>
     </>
