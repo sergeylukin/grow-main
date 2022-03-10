@@ -56,10 +56,10 @@ function Content() {
   return (
     <>
       <Block factor={1} offset={0}>
-        <Block factor={1.2}>
-          <Text left size={w * 0.15} position={[-w / 3.2, 0.5, -1]} color="#d40749">
-            MOKSHA
-          </Text>
+        <Block offset={-0.1} shift={0.3} factor={2.1}>
+          <group position={[2, -2, 0]}>
+            <Plane map={images[0]} shift={15} factor={2} aspect={0.3} args={[24, 19, 22, 22]} ssize={24} />
+          </group>
         </Block>
         <Block factor={1.0}>
           <Html className="bottom-left" style={{ color: "white" }} position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
@@ -68,7 +68,7 @@ function Content() {
         </Block>
       </Block>
       <Block factor={1.2} offset={5.7}>
-        <MultilineText top left size={w * 0.15} lineHeight={w / 5} position={[-w / 3.5, 0, -1]} color="#2fe8c3" text={"four\nzero\nzero"} />
+        <MultilineText top left size={w * 0.15} lineHeight={w / 3} position={[-w / 3.5, 0, -1]} color="#2fe8c3" text={"ZERO\nDOWN\nTIME"} />
       </Block>
       {state.paragraphs.map((props, index) => (
         <Paragraph key={index} index={index} {...props} image={images[index]} />
